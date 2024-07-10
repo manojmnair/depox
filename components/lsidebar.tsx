@@ -11,7 +11,7 @@ interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
 export function LeftSidebar({ playlists }: SidebarProps) {
     return (
         // <div className={cn("pb-12", className)}>
-        <div className="space-y-4 py-4 bg-[#e2e8f0] dark:bg-[#1e293b] rounded-md ml-2 mr-2 mt-1 pb-12 shadow-lg shadow-gray-500/50 ">
+        <div className="hidden md:flex flex-col space-y-4 py-4 bg-[#e2e8f0] dark:bg-[#1e293b] rounded-md ml-2 mr-2 mt-1 pb-12 shadow-lg shadow-gray-500/50 ">
                 <div className="px-3 py-2 ">
                     <h2 className="mb-2 px-4 text-lg font-semibold tracking-tight">
                         Discover

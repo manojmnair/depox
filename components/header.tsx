@@ -31,11 +31,11 @@ export function Header() {
     const { theme, setTheme } = useTheme();
     return (
         <>
-            <Menubar className="sticky top-0 left-0 w-full h-15 flex z-10  flex-row items-center justify-between grow-0 border-b border-none px-2 lg:px-4 bg-[#e2e8f0] dark:bg-[#1e293b] rounded  ml-1 mr-1 shadow-lg shadow-gray-500/50">
-                <div className="mr-20">
+            <Menubar className="sticky top-0 left-0 w-full h-15 flex z-10  flex-row justify-between grow-0 border-b border-none px-2 lg:px-4 bg-[#e2e8f0] dark:bg-[#1e293b] rounded  ml-1 mr-1 shadow-lg shadow-gray-500/50">
+                <div className="w-[20%] ">
  
                         <Link className="flex flex-row" href="/">
-                        <div className="flex flex-row">
+                        {/* <div className="flex flex-row"> */}
                             <Image
                                 width={36}
                                 height={36}
@@ -44,15 +44,15 @@ export function Header() {
                                 alt="logo"
                             />
                             <span className="text-md  uppercase text-blue-700 dark:text-blue-300 hover:decoration-blue-400 decoration-double font-dosis mt-3">Depox</span>
-                    </div>
+                    {/* </div> */}
                         </Link>
  
 
 
                 </div>
-                <div className="flex w-full px-3 ml-15">
+                <div className="flex px-3 w-[30%] items-center">
                     <MenubarMenu>
-                        <MenubarTrigger className="font-bold">Music</MenubarTrigger>
+                        <MenubarTrigger className="font-bold">Home</MenubarTrigger>
                         <MenubarContent>
                             <MenubarItem>About Music</MenubarItem>
                             <MenubarSeparator />
@@ -245,19 +245,24 @@ export function Header() {
                             </MenubarItem>
                         </MenubarContent>
                     </MenubarMenu>
-                    {address ?
-                    <div className="ml-20">
+{/*                     {address ?
+                        <div className="w-[20%] flex flex-row items-end">
                             <Button variant="outline" className="bg-green-300 hover: bg-green-200 dark:bg-green-500 dark:hover:bg-green-400"><Link href="/counter">Deposit</Link></Button>
                             <Button variant="outline" className="ml-3 bg-red-300 hover: bg-red-200 dark:bg-red-500 dark:hover:bg-red-400"><Link href="/counter">Withdraw</Link></Button>
                         </div> : <></>
-                    }
+                    } */}
 
 
                 </div>
+                {address ?
+                    <div className="w-[20%] flex flex-row items-end">
+                        <Button variant="outline" className="bg-green-300 hover: bg-green-200 dark:bg-green-500 dark:hover:bg-green-400"><Link href="/counter">Deposit</Link></Button>
+                        <Button variant="outline" className="ml-3 bg-red-300 hover: bg-red-200 dark:bg-red-500 dark:hover:bg-red-400"><Link href="/counter">Withdraw</Link></Button>
+                    </div> : <></>
+                }
 
 
-
-                <div className="flex flex-row mt-1 ">
+                <div className="flex flex-row mt-1 w-[30%] items-end ml-11">
                     {address?
                     <Image
                         width={36}

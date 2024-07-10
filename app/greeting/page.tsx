@@ -1,7 +1,7 @@
 'use client';
 
-import { useAccount, useBalance, useChainId } from 'wagmi';
-import { useAccount, useReadContract, useWriteContract, useWaitForTransactionReceipt } from "wagmi";
+
+import { useAccount, useBalance, useChainId, useReadContract, useWriteContract, useWaitForTransactionReceipt } from "wagmi";
 import { useEffect, useState } from "react";
 import { Address } from 'viem'
 import { Button } from "../../components/ui/button"
