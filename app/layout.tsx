@@ -1,7 +1,8 @@
 import './globals.css';
-import { Header } from '../components/header';
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
+
+import { Navbar } from '../components/navbar';
 import Providers from '../hooks/providers';
 import { ThemeProvider } from '../hooks/theme-provider';
 
@@ -27,8 +28,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Providers>
-            <Header />
-            {children}
+            <div className="sticky top-0 left-0  w-full bg-white px-4 md:px-8 lg:px-12 xl:px-24 2xl:px-48 z-20">
+              <Navbar />
+            </div>
+            <div className=" bg-slate-100 px-4 md:px-8 lg:px-12 xl:px-24 2xl:px-48">
+              {children}
+            </div>
           </Providers>
         </ThemeProvider>
       </body>

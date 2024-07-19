@@ -1,4 +1,4 @@
-// File: /home/manoj/hackathon/15.HackOnBlocks/depox/app/counter/layout.tsx
+// File: /home/manojm/hackathon/HackOnBlocks/depox/app/counter/layout.tsx
 import * as entry from '../../../../app/counter/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

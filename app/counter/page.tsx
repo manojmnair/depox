@@ -77,7 +77,7 @@ export default function Counter() {
   if (!hasMounted) return null
 
   return (
-    <div className="px-3 py-2 z-0">
+    <div className="h-screen p-4 bg-white rounded-lg shadow-md text-xs">
       { address }
       <h1>Counter:{counter}</h1> 
       {isLoading && <p>Updating Count...</p>}
@@ -92,14 +92,14 @@ export default function Counter() {
         <Button onClick={handleReset}  className="m-2">Reset</Button>
 
       <div className="m-2" >
-        <input className="text-base border-r-8 p-2"
+          <input className="text-base border-8 p-2 border-slate-200"
           type="number"
             value={initialCount}
           onChange={handleInitialCountChange}
         />
         <Button
             onClick={handleSetCount}
-          className="p-1 text-base ml-1 border-r-4 cursor-pointer border-none outline-none" >
+          className="p-1 text-base ml-1 border-4 cursor-pointer  outline" >
           Set Initial Count
         </Button>    
       </div> 

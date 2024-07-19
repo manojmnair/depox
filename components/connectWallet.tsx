@@ -3,6 +3,7 @@
 
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
 import { Button } from "./ui/button"
+// import { useEffect } from 'react'
 import { injected } from 'wagmi/connectors'
 import { polygonZkEvmCardona } from 'viem/chains';
 import { useRouter } from 'next/navigation'
@@ -27,23 +28,28 @@ export function ConnectWalletButton() {
         router.push('/')
                 // }
     }
+/* 
+    useEffect(() => {
+        connect() 
+    }, [address]); */
+
     {
         if (!address) {
             return (
-                <>
-                    <Button variant="outline" className="mr-5 bg-green-300 hover: bg-green-200 dark:bg-green-500 dark:hover:bg-green-400"
+                <div className='hidden md:flex'>
+                    <Button variant="outline" className="mr-5 text-[#0891b2] hover:text-[#0f766e] dark:text-[#2dd4bf] "
                         onClick={connect}>
                         Connect
                     </Button>
-                </>
+                </div>
             )
         }
         if (address) {
             return (
-                <>
-                    <Button variant="outline" className="mr-5 bg-red-300 hover: bg-red-200 dark:bg-red-500 dark:hover:bg-red-400" onClick={disConnect}>
+                <div className='hidden md:flex'>
+                    <Button variant="outline" className="mr-5 text-[#be185d] dark:text-[#fb7185] hover:text-[#be123c] " onClick={disConnect}>
                         Disconnect</Button> 
-                </>
+                </div>
             )
         }
 

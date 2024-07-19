@@ -1,4 +1,5 @@
 //import Image from "next/image";
+
 import type { Metadata } from 'next'
 
 
@@ -6,13 +7,12 @@ export const metadata: Metadata = {
   title: 'Depox',
   description: 'RWA',
 };
-export const dappMetadata = {
-  name: "Depox",
-};
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between  bg-[#e2e8f0] dark:bg-[#1e293b] rounded-md  z-0 ml-1 mt-1 px-3 py-2">
-      <section className="relative px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-16 lg:py-32">
+    <div className="flex gap-6 pt-4">
+      <main className="flex min-h-screen flex-col items-center justify-between  bg-white rounded-lg shadow-md text-xs">
+      <section className="relative px-4 sm:px-8 lg:px-8 xl:px-32 2xl:px-64 py-8 lg:py-16">
         <div className="flex flex-col lg:flex-row lg:-mx-8">
           <div className="w-full lg:w-1/2 lg:px-8">
             <h2 className="text-3xl leading-tight font-bold mt-4">Why choose the Mesothelioma Center?</h2>
@@ -151,5 +151,6 @@ export default function Home() {
 
 
     </main>
+    </div>
   );
 }

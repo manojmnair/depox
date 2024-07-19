@@ -14,11 +14,20 @@ declare module 'wagmi' {
 
 export const config = createConfig({
   chains: [polygonZkEvmCardona, sepolia, localhost],
-  connectors: [metaMask(), injected()],
+  connectors: [
+    metaMask({
+      dappMetadata: {
+        name: 'Depox',
+        //url: 'https://wagmi.io',
+        //iconUrl: 'https://wagmi.io/favicon.ico'
+      }
+    }),
+    injected()
+  ],
   transports: {
     [polygonZkEvmCardona.id]: http(),
     [sepolia.id]: http(),
-    [localhost.id]: http(),
+    [localhost.id]: http()
   },
   ssr: true
 });

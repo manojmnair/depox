@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Repo for the depox",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
